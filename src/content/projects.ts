@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Bogdan Puri",
   role: "AI systems & app developer",
-  location: "Cluj-Napoca, RO",
+  location: "Transylvania, RO",
   timeZone: "Europe/Bucharest",
   email: "puribogdan@gmail.com",
 };
@@ -217,7 +217,7 @@ export const LAB: LabItem[] = [
   { name: "Meeting Companion", kind: "Desktop app", tagline: "Listens to a meeting and explains the jargon in near real time.", stack: ["Electron", "React", "OpenAI"] },
   { name: "ChatGPT → Claude", kind: "Chrome extension", tagline: "Moves conversations, memories and custom instructions from ChatGPT to Claude, with no server.", stack: ["React 19", "Manifest V3"] },
   { name: "OLX Radar", kind: "Bot", tagline: "Watches OLX searches and pings Telegram the moment a new listing appears.", stack: ["Python", "Playwright", "SQLite"] },
-  { name: "Travel Deals Radar", kind: "Bot", tagline: "Pulls Wizz Air and Ryanair fares from Cluj daily and flags round trips far below their usual price.", stack: ["Python", "Postgres", "Docker"] },
+  { name: "Travel Deals Radar", kind: "Bot", tagline: "Pulls Wizz Air and Ryanair fares from Transylvania daily and flags round trips far below their usual price.", stack: ["Python", "Postgres", "Docker"] },
   { name: "Menu Poster AI", kind: "Prototype", tagline: "Turns a restaurant menu into a print-ready poster. AI-first, no OCR.", stack: ["Next.js", "Supabase", "sharp"] },
   { name: "Shopify Review Mining", kind: "Research", tagline: "Mined 1–2★ reviews of ten Shopify apps to rank app ideas worth building.", stack: ["Python", "Data"] },
 ];
