@@ -78,7 +78,40 @@ export const WORK: CaseStudy[] = [
     stack: ["NestJS", "BullMQ", "Redis", "Supabase", "Postgres", "Zod", "Mistral", "OpenTelemetry", "Flutter"],
   },
   {
+    slug: "permison",
+    cover: { tiles: ["/work/permison/home.jpg", "/work/permison/question.jpg", "/work/permison/tutor.jpg"], aspect: "9 / 16" },
+    title: "PermisON",
+    year: "2026",
+    client: "My own product · iOS & Android",
+    role: "Product, Flutter app, AI tutor, backend",
+    tagline: "Pass the Romanian driving-theory exam on the first try.",
+    tags: ["Mobile app", "AI tutor", "Flutter"],
+    problem:
+      "Learners grind through hundreds of official questions with no idea whether they are actually ready, and when they get one wrong, nobody explains why.",
+    built:
+      "A Flutter app built on a bank of 1,116 official questions, collected and deduplicated by a Python scraper. A short mini-exam during onboarding sets a starting score, and a planner turns the exam date into 3–6 small missions a day until the learner is ready. Domnul Mircea, an AI tutor, explains every mistake and answers follow-up questions from the law text through retrieval in a Supabase edge function. Freemium with RevenueCat subscriptions and rewarded ads.",
+    hard:
+      "Telling a learner “you’re ready” when they aren’t is the worst bug. The readiness verdict and the planner were tuned on hundreds of simulated students before real ones saw them, and the tutor is graded against a hand-checked gold set of real questions and traps.",
+    outcome:
+      "Tutor answers that state something false went from 17% to 9%, and wrong answers on trap questions from 31% to 8%.",
+    flow: ["Mini-exam", "Starting score", "Daily missions", "Practice + mocks", "Mistake explained", "Ready verdict"],
+    decisions: [
+      { title: "Simulate before you ship", body: "Readiness and the planner were tuned on simulated students with different study habits, measuring how often the app says “go” too early." },
+      { title: "Measure the tutor, not the vibe", body: "Every prompt or retrieval change is scored against a gold set checked by hand against the official answers and the law." },
+      { title: "Facts the model can’t miss", body: "Speed limits and other numbers it kept getting wrong became fact cards that are always included when the topic comes up." },
+      { title: "Checked explanations only", body: "836 explanations were checked by a script and by hand; only the 757 that passed feed the tutor." },
+    ],
+    facts: [
+      { value: "1,116", label: "official questions collected" },
+      { value: "757", label: "checked explanations feeding the tutor" },
+      { value: "17→9%", label: "tutor answers stating something false" },
+      { value: "3.4%", label: "of simulated students told “ready” too early" },
+    ],
+    stack: ["Flutter", "Supabase", "Deno", "OpenAI", "RevenueCat", "AdMob", "Python", "PostHog", "Sentry"],
+  },
+  {
     slug: "ai-interior-design",
+    cover: { src: "/work/interior/app.jpg" },
     title: "AI Interior Design",
     year: "2026",
     client: "Interior design startup",
@@ -108,7 +141,7 @@ export const WORK: CaseStudy[] = [
   },
   {
     slug: "dreampop",
-    cover: { src: "/work/dreampop.jpg" },
+    cover: { src: "/work/dreampop-site.jpg" },
     title: "DreamPop",
     year: "2025–26",
     client: "DreamPop",
@@ -182,13 +215,6 @@ export const WORK: CaseStudy[] = [
 ];
 
 export const APPS: App[] = [
-  {
-    name: "PermisON",
-    tagline: "Pass the Romanian driving-theory exam on the first try.",
-    platform: "iOS · Android",
-    stack: ["Flutter", "Python", "SQLite"],
-    screens: ["/apps/permison/2.jpg", "/apps/permison/3.jpg", "/apps/permison/4.jpg"],
-  },
   {
     name: "WA-Muter",
     tagline: "Mute the noise, keep the important stuff. Scheduled muting for WhatsApp.",
